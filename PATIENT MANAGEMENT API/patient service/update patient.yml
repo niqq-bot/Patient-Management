@@ -1,0 +1,31 @@
+info:
+  name: update patient
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: localhost:4000/patients/{{id}}
+  body:
+    type: json
+    data: |-
+      {
+          "address": "123 Main St, Springfieldddd",
+          "dateOfBirth": "1985-06-15",
+          "email": "john.doe@examplee.com",
+          "name": "John Doe",
+          "registeredDate": "2005-07-19"
+        }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: id
+      value: c1877774-ee74-4310-974c-75fae148de8e
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

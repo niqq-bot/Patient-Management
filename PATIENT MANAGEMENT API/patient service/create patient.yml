@@ -1,0 +1,16 @@
+info:
+  name: create patient
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: localhost:4000/patients/create
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
