@@ -1,0 +1,27 @@
+services:
+  patient-service:
+    build:
+      context: ./patient-service
+      dockerfile: Dockerfile
+
+    ports:
+      - "4000:4000"
+
+    env_file:
+      - patient-service/.env
+
+    depends_on:
+      - patient-service-db
+  patient-service-db:
+    image: postgres:latest
+    env_file:
+      - patient-service/.env
+
+    ports:
+      - "5000:5434"
+
+    volumes:
+      - patient-service-db-data:/var/lib/postgresql
+
+volumes:
+  patient-service-db-data:

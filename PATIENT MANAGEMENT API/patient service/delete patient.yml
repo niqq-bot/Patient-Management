@@ -1,0 +1,21 @@
+info:
+  name: delete patient
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: localhost:4000/patients/{{id}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: id
+      value: 223e4567-e89b-12d3-a456-426614174014
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

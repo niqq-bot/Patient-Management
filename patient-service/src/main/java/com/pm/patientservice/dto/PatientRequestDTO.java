@@ -23,7 +23,7 @@ public class PatientRequestDTO {
     private String dateOfBirth;
 
 
-    @NotBlank(groups = CreatePatientValidatorsGroup.class)
+    @NotBlank(groups = CreatePatientValidatorsGroup.class,message = "registered date is required")
     private String registeredDate;
 
     public String getRegisteredDate() {

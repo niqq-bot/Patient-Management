@@ -18,6 +18,7 @@ public interface PatientMapper {
     @Mapping(source = "registeredDate",target = "registeredDate")
     Patient toPatient(PatientRequestDTO requestDTO);
 
+    @Mapping(target = "registeredDate",ignore = true)
     void updatePatientFromDTO(
             PatientRequestDTO requestDTO,
             @MappingTarget Patient patient

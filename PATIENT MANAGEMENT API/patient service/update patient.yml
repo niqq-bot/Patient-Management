@@ -13,15 +13,14 @@ http:
           "address": "123 Main St, Springfieldddd",
           "dateOfBirth": "1985-06-15",
           "email": "john.doe@examplee.com",
-          "name": "John Doe",
-          "registeredDate": "2005-07-19"
+          "name": "John Doe"
         }
   auth: inherit
 
 runtime:
   variables:
     - name: id
-      value: c1877774-ee74-4310-974c-75fae148de8e
+      value: 337d4390-5cb8-47e4-b1f0-2486d347fde4
 
 settings:
   encodeUrl: true
